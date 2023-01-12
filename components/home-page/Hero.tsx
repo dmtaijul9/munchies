@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-1/2">
+        <div className="items-center justify-center hidden w-1/2 md:flex">
           <Image
             src="/img/cuate.png"
             alt="cuate"

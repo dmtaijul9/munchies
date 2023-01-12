@@ -5,13 +5,12 @@ import axios from "axios";
 import LoadingCard from "../products/LoadingCard";
 import { GoPlus } from "react-icons/go";
 
-const getProductsList = () => {
+export const getProductsList = () => {
   return axios.get(`https://munchies-api.up.railway.app/products`);
 };
 const HomeKitchen = () => {
   const [short, setShort] = useState<string>("all");
   const { data, isLoading, isError } = useQuery("products", getProductsList);
-  console.log(data, isLoading);
 
   return (
     <section className="py-16 bg-[#F7F8FA]">

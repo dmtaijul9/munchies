@@ -37,13 +37,13 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full ">
               <label htmlFor="message"></label>
               <textarea
                 name="message"
-                cols="30"
+                cols={30}
                 className="w-full px-4 py-4 rounded-xl "
-                rows="10"
+                rows={10}
                 placeholder="Your Message"
               />
             </div>

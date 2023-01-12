@@ -18,7 +18,7 @@ const Footer = () => {
               className="w-auto "
             />
           </div>
-          <ul className="flex space-x-4">
+          <ul className="hidden space-x-4 md:flex ">
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -36,10 +36,10 @@ const Footer = () => {
             </li>
           </ul>
           <div className="flex items-center space-x-3">
-            <button className="flex items-center bg-white text-gray-400 p-2 rounded-md">
+            <button className="flex items-center p-2 text-gray-400 bg-white rounded-md">
               <FaFacebookF size={16} />
             </button>
-            <button className="flex items-center bg-white text-gray-400 p-2 rounded-md">
+            <button className="flex items-center p-2 text-gray-400 bg-white rounded-md">
               <AiFillInstagram size={16} />
             </button>
           </div>
