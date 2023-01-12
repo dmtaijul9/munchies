@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { items } from "../../lib/type";
 
 const initialState = {
   items: [],
@@ -12,10 +13,11 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload.id
+        (item: items) => item.id === action.payload.id
       );
 
       if (itemIndex >= 0) {
+        //@ts-ignore
         state.items[itemIndex].quantity += Number(action.payload.quantity);
         state.cartTotalQuantity += Number(action.payload.quantity);
       } else {
@@ -23,34 +25,37 @@ const cartSlice = createSlice({
           ...action.payload,
           quantity: Number(action.payload.quantity),
         };
-
+        //@ts-ignore
         state.items.push(tempProduct);
         state.cartTotalQuantity += Number(action.payload.quantity);
       }
     },
     increamentCart: (state, action) => {
       const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload.id
+        (item: items) => item.id === action.payload.id
       );
 
       if (itemIndex >= 0) {
+        //@ts-ignore
+
         state.items[itemIndex].quantity += 1;
         state.cartTotalQuantity += 1;
       }
     },
     decreamentCart: (state, action) => {
       const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload.id
+        (item: items) => item.id === action.payload.id
       );
 
       if (itemIndex >= 0) {
+        //@ts-ignore
         state.items[itemIndex].quantity -= 1;
         state.cartTotalQuantity -= 1;
       }
     },
     deleteItems: (state, action) => {
       const afterDeleteItem = state.items.filter(
-        (item) => item.id !== action.payload.id
+        (item: items) => item.id !== action.payload.id
       );
 
       state.items = [...afterDeleteItem];
