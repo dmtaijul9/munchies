@@ -16,9 +16,9 @@ const CartPage = () => {
   const dispatch = useDispatch();
 
   const router = useRouter();
-
+  //@ts-ignore
   const subTotal = getSubTotal(items);
-
+  //@ts-ignore
   const vat = getVat(items);
 
   return (

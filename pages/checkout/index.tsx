@@ -92,7 +92,7 @@ const index = () => {
           <div className="px-4 pt-8">
             <p className="text-xl font-medium">Order Summary</p>
             <p className="text-gray-400">
-              Check your items. And select a suitable shipping method.
+              Check your items as summary to order.
             </p>
             <div className="px-2 py-4 mt-8 space-y-3 bg-white border rounded-lg sm:px-6">
               {items.map((item: objAddonItems) => {
