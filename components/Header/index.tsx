@@ -13,7 +13,7 @@ const Header = ({ transparent }: { transparent?: boolean }) => {
   return (
     <>
       <header
-        className={` w-screen py-2 ${navOpen ? "bg-white" : ""} ${
+        className={` w-full py-2 ${navOpen ? "bg-white" : ""} ${
           transparent ? "absolute" : ""
         }`}
       >
