@@ -18,10 +18,10 @@ const HomeKitchen = () => {
         <div>
           <h1 className="text-[24px] font-medium">Home Kitchen</h1>
 
-          <ul className="border border-[#F3BA00] inline-flex rounded-xl overflow-hidden mt-3">
+          <ul className="border border-[#F3BA00] md:w-[800px] flex flex-row items-center rounded-xl overflow-hidden mt-3">
             <li
               className={`border-r custome-short-btn ${
-                short === "all" ? "bg-[#F3BA00] font-medium" : "text-gray-500"
+                short === "all" ? "bg-[#F3BA00] font-bold" : "text-gray-500"
               }`}
               onClick={(e) => {
                 setShort("all");
@@ -32,7 +32,7 @@ const HomeKitchen = () => {
             <li
               className={`border-r custome-short-btn  ${
                 short === "button"
-                  ? "bg-[#F3BA00] font-medium"
+                  ? "bg-[#F3BA00] font-medium font-bold"
                   : "text-gray-500"
               }`}
               onClick={(e) => {
@@ -43,7 +43,9 @@ const HomeKitchen = () => {
             </li>
             <li
               className={`border-r custome-short-btn  ${
-                short === "free" ? "bg-[#F3BA00] font-medium" : "text-gray-500"
+                short === "free"
+                  ? "bg-[#F3BA00] font-medium font-bold"
+                  : "text-gray-500"
               }`}
               onClick={(e) => {
                 setShort("free");
@@ -53,7 +55,9 @@ const HomeKitchen = () => {
             </li>
             <li
               className={`border-r custome-short-btn  ${
-                short === "new" ? "bg-[#F3BA00] font-medium" : "text-gray-500"
+                short === "new"
+                  ? "bg-[#F3BA00] font-medium font-bold"
+                  : "text-gray-500"
               }`}
               onClick={(e) => {
                 setShort("new");
@@ -64,7 +68,7 @@ const HomeKitchen = () => {
             <li
               className={`custome-short-btn  ${
                 short === "coming"
-                  ? "bg-[#F3BA00] font-medium"
+                  ? "bg-[#F3BA00] font-medium font-bold"
                   : "text-gray-500"
               }`}
               onClick={(e) => {

@@ -5,15 +5,17 @@ const Hero = () => {
   return (
     <section className="bg-[#0C1712]  py-20">
       <div className="container flex items-center justify-between m-auto min-h-[700px]">
-        <div className="w-1/2 text-white">
-          <div className=" w-[500px]">
-            <h1 className="text-[70px]">Authentic Home food in UK</h1>
+        <div className="px-2 text-white md:w-1/2 md:px-0">
+          <div className=" md:w-[500px] w-full">
+            <h1 className="md:text-[70px] text-[40px]">
+              Authentic Home food in UK
+            </h1>
             <p>
               What2Eat is a courier service in which authentic home cook food is
               delivered to a customer.
             </p>
           </div>
-          <div className="mt-5 w-[400px]">
+          <div className="mt-5 max-w-[400px]">
             <div className="relative flex items-stretch w-full mb-4 input-group">
               <input
                 type="search"
@@ -33,7 +35,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="items-center justify-center hidden w-1/2 md:flex">
+        <div className="items-center justify-center hidden w-1/2 lg:flex">
           <Image
             src="/img/cuate.png"
             alt="cuate"

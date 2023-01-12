@@ -9,5 +9,5 @@ body {
 }
 
 .custome-short-btn {
-  @apply px-10 py-3 border-[#F3BA00] cursor-pointer;
+  @apply border-[#F3BA00] cursor-pointer w-full h-[50px] flex items-center justify-center;
 }
