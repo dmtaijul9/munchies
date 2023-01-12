@@ -31,8 +31,12 @@ const Header = ({ transparent }: { transparent?: boolean }) => {
           </div>
 
           <div
-            className={`items-center md:hidden mr-6 space-x-3 flex ${
-              navOpen ? "text-gray-700" : "text-white"
+            className={`items-center md:hidden mr-6 space-x-3 flex  ${
+              navOpen
+                ? "text-gray-700"
+                : transparent
+                ? "text-white"
+                : "text-gray-800"
             } `}
           >
             <div className="flex items-center mr-6 space-x-3">
