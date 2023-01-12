@@ -31,9 +31,7 @@ const HomeKitchen = () => {
             </li>
             <li
               className={`border-r custome-short-btn  ${
-                short === "button"
-                  ? "bg-[#F3BA00] font-medium font-bold"
-                  : "text-gray-500"
+                short === "button" ? "bg-[#F3BA00]  font-bold" : "text-gray-500"
               }`}
               onClick={(e) => {
                 setShort("button");
@@ -43,9 +41,7 @@ const HomeKitchen = () => {
             </li>
             <li
               className={`border-r custome-short-btn  ${
-                short === "free"
-                  ? "bg-[#F3BA00] font-medium font-bold"
-                  : "text-gray-500"
+                short === "free" ? "bg-[#F3BA00]  font-bold" : "text-gray-500"
               }`}
               onClick={(e) => {
                 setShort("free");
@@ -55,9 +51,7 @@ const HomeKitchen = () => {
             </li>
             <li
               className={`border-r custome-short-btn  ${
-                short === "new"
-                  ? "bg-[#F3BA00] font-medium font-bold"
-                  : "text-gray-500"
+                short === "new" ? "bg-[#F3BA00] font-bold" : "text-gray-500"
               }`}
               onClick={(e) => {
                 setShort("new");
@@ -67,9 +61,7 @@ const HomeKitchen = () => {
             </li>
             <li
               className={`custome-short-btn  ${
-                short === "coming"
-                  ? "bg-[#F3BA00] font-medium font-bold"
-                  : "text-gray-500"
+                short === "coming" ? "bg-[#F3BA00] font-bold" : "text-gray-500"
               }`}
               onClick={(e) => {
                 setShort("coming");

@@ -54,7 +54,7 @@ const ProductPage = () => {
     <Layout transparent={false}>
       <section className="container mx-auto my-16">
         <div>
-          <ul className="border border-[#F3BA00] inline-flex rounded-xl overflow-hidden mt-3">
+          <ul className="border border-[#F3BA00] md:w-[400px] flex flex-row items-center rounded-xl overflow-hidden mt-3">
             <li
               className={`border-r custome-short-btn ${
                 addonType === "half"

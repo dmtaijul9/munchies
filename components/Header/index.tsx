@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { HiShoppingBag } from "react-icons/hi";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { useSelector } from "react-redux";
 import { state } from "../../lib/type";
 
@@ -61,9 +60,9 @@ const Header = ({ transparent }: { transparent?: boolean }) => {
               }}
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
@@ -113,7 +112,7 @@ const Header = ({ transparent }: { transparent?: boolean }) => {
               </li>
               <li>
                 <Link
-                  className="block py-2 text-purple-500 md:p-4 hover:text-purple-400"
+                  className="block py-2 md:p-4 hover:text-purple-400"
                   href="#"
                 >
                   Contact
