@@ -65,7 +65,7 @@ const index = () => {
     const readyToOrderProccess = {
       customer,
       calculation,
-      cartItems,
+      items: { ...cartItems },
     };
 
     console.log(readyToOrderProccess);
@@ -75,13 +75,19 @@ const index = () => {
         method: "POST",
         data: readyToOrderProccess,
         headers: {
-          "Content-Type": "application/javascript",
+          "Content-Type": "application/json",
           "x-access-user": "taijulislam.st9@gmail.com",
         },
       });
       console.log(res);
-    } catch (error) {
+      if (res.data) {
+        toast.success("Order has been created!");
+      }
+    } catch (error: any) {
       console.log(error);
+      if (error.message) {
+        toast.error("Something is wrong. ");
+      }
     }
   };
 
