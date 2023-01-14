@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Image from "next/image";
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Card from "../../components/checkout/Card";
 import Layout from "../../components/ui/Layout";
 import { useForm } from "../../lib/useForm";
@@ -12,10 +12,12 @@ import { toast } from "react-toastify";
 import { getSubTotal, getVat } from "../../utils/getData";
 import axios from "axios";
 import { objAddonItems } from "../../lib/type";
+import { clearItems } from "../../redux/services/cartSlice";
 
 const index = () => {
   const router = useRouter();
   const { items, cartTotalAmount } = useSelector((state: any) => state.cart);
+  const dispatch = useDispatch();
   useEffect(() => {
     if (cartTotalAmount <= 0) {
       router.push("/");
@@ -82,6 +84,8 @@ const index = () => {
       console.log(res);
       if (res.data) {
         toast.success("Order has been created!");
+        dispatch(clearItems([]));
+        router.push("/");
       }
     } catch (error: any) {
       console.log(error);
